@@ -1,2 +1,2 @@
 # veact
-replacing React with VanillaJS
+simple React with VanillaJS
