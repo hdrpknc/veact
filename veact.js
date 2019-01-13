@@ -19,6 +19,6 @@ function makeElement(type, props, text) {
  document.body.appendChild(
   h1(
     { className: `title` },
-    `Hello, world.`,
+    `veact.js`,
   )
  );
