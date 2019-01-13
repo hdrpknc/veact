@@ -1,2 +1,2 @@
 # veact
-simple React with VanillaJS
+simple approach React with VanillaJS
