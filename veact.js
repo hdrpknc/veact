@@ -48,20 +48,20 @@ function makeElement(type, textOrPropsOrChild, ...otherChildren) {
     appendArray(el, textOrPropsOrChild);
   } else if (textOrPropsOrChild instanceof window.Element) {
     el.appendChild(textOrPropsOrChild);
-  } else if (typeof textOrPropsOrChild === `string`) {
+  } else if (typeof textOrPropsOrChild === "string") {
     appendText(el, textOrPropsOrChild);
-  } else if (typeof textOrPropsOrChild === `object`) {
+  } else if (typeof textOrPropsOrChild === "object") {
     Object.keys(textOrPropsOrChild).forEach((propName) => {
       if (propName in el || attributeExceptions.includes(propName)) {
         const value = textOrPropsOrChild[propName];
 
-        if (propName === `style`) {
+        if (propName === "style") {
           setStyles(el, value);
         } else if (value) {
           el[propName] = value;
         }
       } else {
-        console.warn(`${propName} is not a valid property of a <${type}>`);
+        console.warn("${propName} is not a valid property of a <${type}>");
       }
     });
   }
@@ -73,10 +73,32 @@ function makeElement(type, textOrPropsOrChild, ...otherChildren) {
 
 
 //html elements which veact.js supports
- const h1 = (...args) => makeElement("h1", ...args);
- const button = (...args) => makeElement("button", ...args);
- const div = (...args) => makeElement("div", ...args);
- const a = (...args) => makeElement("a", ...args);
- const header = (...args) => makeElement("header", ...args);
- const p = (...args) => makeElement("p", ...args);
- const span = (...args) => makeElement("span", ...args);
+const button = (...args) => makeElement("button", ...args);
+const div = (...args) => makeElement("div", ...args);
+const a = (...args) => makeElement("a", ...args);
+const header = (...args) => makeElement("header", ...args);
+const p = (...args) => makeElement("p", ...args);
+const span = (...args) => makeElement("span", ...args);
+const h1 = (...args) => makeElement("h1", ...args);
+ 
+
+
+ // and then ...
+ document.body.appendChild(
+  div({ id: `app` },
+    header({ className: `header` },
+      h1({ className: `header__title` }, `Test Text Bla Bla Lukas`),
+      a(
+        {
+          className: `header__help`,
+          target: `_blank`,
+          rel: `noopener noreferrer`,
+          title: `whut uuuuuup`,
+          href: `https://google.com`,
+        },
+        `What is this?`,
+      ),
+    ),
+    div({ className: `skill-table` }),
+  )
+);
