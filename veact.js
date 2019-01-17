@@ -81,24 +81,36 @@ const p = (...args) => makeElement("p", ...args);
 const span = (...args) => makeElement("span", ...args);
 const h1 = (...args) => makeElement("h1", ...args);
  
+const Header = props => (
+  header({ className: "header" },
+    h1({ className: "header__title" }, "Welcome to veact.js"),
+    a(
+      {
+        className: `header__help`,
+        target: `_blank`,
+        rel: `noopener noreferrer`,
+        title: `Find out more about know it all, version ${props.version}`,
+        href: "https://github.com/hdrpknc/veact/blob/master/README.md",
+      },
+      `What is veact.js?`,
+    ),
+  )
+);
+
+const Table = props => div({ className: `skill-table` }, props.rows);
+
+const App = props => (
+  div({ id: `app` },
+  Header({ version: props.version }),
+  Table({ rows: props.rows }),
+  )
+);
 
 
  // and then ...
  document.body.appendChild(
-  div({ id: `app` },
-    header({ className: `header` },
-      h1({ className: `header__title` }, `Test Text Bla Bla Lukas`),
-      a(
-        {
-          className: `header__help`,
-          target: `_blank`,
-          rel: `noopener noreferrer`,
-          title: `whut uuuuuup`,
-          href: `https://google.com`,
-        },
-        `What is this?`,
-      ),
-    ),
-    div({ className: `skill-table` }),
-  )
+   App({
+     rows: " ",
+     version: 1
+  })
 );
