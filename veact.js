@@ -113,5 +113,5 @@ const someData = {
 
  // and then ...
  document.body.appendChild(
-   App(someData);
+   App(someData)
 );

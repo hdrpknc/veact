@@ -1,0 +1,22 @@
+{
+  "name": "veact",
+  "version": "1.0.0",
+  "description": "veact.js is a simple React approach with VanillaJS",
+  "main": "veact.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdrpknc/veact.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/hdrpknc/veact/issues"
+  },
+  "homepage": "https://github.com/hdrpknc/veact#readme"
+}
