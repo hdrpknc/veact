@@ -106,11 +106,12 @@ const App = props => (
   )
 );
 
+const someData = {
+  rows: " ",
+  version: 1
+};
 
  // and then ...
  document.body.appendChild(
-   App({
-     rows: " ",
-     version: 1
-  })
+   App(someData);
 );
