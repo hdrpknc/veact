@@ -1,6 +1,7 @@
 import { div } from '../libs/veact.js';
 import { button } from '../libs/veact.js';
 import { p } from '../libs/veact.js';
+import { store } from '../store.js';
 
 export const TableRow = (initialData) => {
     let el = null;
