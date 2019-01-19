@@ -1,4 +1,8 @@
-const TableRow = (initialData) => {
+import { div } from '../libs/veact.js';
+import { button } from '../libs/veact.js';
+import { p } from '../libs/veact.js';
+
+export const TableRow = (initialData) => {
     let el = null;
   
     // called when the component is called
