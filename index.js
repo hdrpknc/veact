@@ -3,7 +3,7 @@ import { Header } from './components/Header.js';
 import { Table } from './components/Table.js';
  
 const someData = {
-    rows: " ",
+    rows: "Table",
     version: 1
   };
   
@@ -18,5 +18,3 @@ const App = props => (
 document.body.appendChild(
      App(someData)
   );
-
-  console.log(count + ability);
