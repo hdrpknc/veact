@@ -1,5 +1,3 @@
-const {div} = require('../veact');
+import { div } from '../veact.js';
 
-const Table = props => div({ className: `skill-table` }, props.rows);
-
-module.exports = Table;
+export const Table = props => div({ className: `skill-table` }, props.rows);

@@ -1,8 +1,8 @@
-const {header} = require('../veact');
-const {h1} = require('../veact');
-const {a} = require('../veact');
+import { header } from '../veact.js';
+import { h1 } from '../veact.js';
+import { a } from'../veact.js';
 
-const Header = props => (
+export const Header = props => (
     header({ className: "header" },
       h1({ className: "header__title" }, "Welcome to veact.js"),
       a(
@@ -17,5 +17,3 @@ const Header = props => (
       ),
     )
   );
-
-module.exports = Header;

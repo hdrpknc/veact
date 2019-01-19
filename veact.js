@@ -1,3 +1,12 @@
+//html elements which veact.js supports
+export const button = (...args) => makeElement("button", ...args);
+export const div = (...args) => makeElement("div", ...args);
+export const a = (...args) => makeElement("a", ...args);
+export const header = (...args) => makeElement("header", ...args);
+export const p = (...args) => makeElement("p", ...args);
+export const span = (...args) => makeElement("span", ...args);
+export const h1 = (...args) => makeElement("h1", ...args);
+
 const attributeExceptions = [
   "role",
 ];
@@ -70,26 +79,3 @@ function makeElement(type, textOrPropsOrChild, ...otherChildren) {
 
   return el;
 }
-
-
-//html elements which veact.js supports
-const button = (...args) => makeElement("button", ...args);
-export const div = (...args) => makeElement("div", ...args);
-const a = (...args) => makeElement("a", ...args);
-const header = (...args) => makeElement("header", ...args);
-const p = (...args) => makeElement("p", ...args);
-const span = (...args) => makeElement("span", ...args);
-const h1 = (...args) => makeElement("h1", ...args);
-
-
-
-// module.exports = {
-//   button : button,
-//   div : div,
-//   a : a,
-//   header : header,
-//   p : p,
-//   span : span,
-//   h1 : h1
-// };
-

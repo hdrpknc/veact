@@ -1,7 +1,7 @@
-import {div} from './veact.js';
-// const Header = require("./components/Header");
-// const Table = require("./components/Table");
-
+import { div } from './veact.js';
+import { Header } from './components/Header.js';
+import { Table } from './components/Table.js';
+ 
 const someData = {
     rows: " ",
     version: 1
