@@ -13,10 +13,10 @@ export const TableRow = (initialData) => {
         div(
           {
             className: `table-row__content`,
-            onclick: () => selectRow(data),
+            onclick: () => console.log("div onClick: "data),
           },
           button(
-            { onclick: e => expandOrCollapseRow(e, data) },
+            { onclick: e => console.log(e, data) },
             `click me`,
           ),
           p(data.name),
