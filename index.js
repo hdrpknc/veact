@@ -1,4 +1,4 @@
-import div from './veact.js';
+import {div} from './veact.js';
 // const Header = require("./components/Header");
 // const Table = require("./components/Table");
 
