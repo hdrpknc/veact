@@ -1,4 +1,5 @@
-export function selectItemById(id) {
+
+export const selectItemById = function(id) {
     this.updateItem(id, { selected: true });
   
     if (this.selectedItem) {
@@ -6,9 +7,9 @@ export function selectItemById(id) {
     }
   
     this.selectedItem = this.getItemById(id);
-  }
+  };
 
-this.updateItem = function (id, data, triggerListener = true) {
+export const updateItem = function(id, data, triggerListener = true) {
     const item = this.getItemById(id);
   
     Object.assign(item, data); // gasp, mutability
@@ -18,4 +19,7 @@ this.updateItem = function (id, data, triggerListener = true) {
     }
   
     if (triggerListener) this.triggerListener(id);
-}
+  };
+
+export const store = {};
+ 
