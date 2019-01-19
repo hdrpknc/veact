@@ -1,7 +1,7 @@
 import { App } from './components/App.js';
 
 const someData = {
-    rows: "Table",
+    rows: 2,
     version: 1
   };
   
