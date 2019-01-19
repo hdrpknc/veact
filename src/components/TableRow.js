@@ -13,7 +13,7 @@ export const TableRow = (initialData) => {
         div(
           {
             className: `table-row__content`,
-            onclick: () => console.log("div onClick: "data),
+            onclick: () => console.log("div onClick: "(data)),
           },
           button(
             { onclick: e => console.log(e, data) },
