@@ -21,7 +21,17 @@ export const updateItem = function(id, data, triggerListener = true) {
     if (triggerListener) this.triggerListener(id);
   };
 
-export const listen = function(a ,b){
-  debugger;
+export const listen = function(id ,callback){
+  data.push({id : id, callback : callback});
+};
+
+const data = [];
+
+this.getItemById = function(id){
+  return data[0];
+};
+
+this.triggerListener = function(id){
+  data[0].callback(id, {name : "drei", id: "3"});
 };
  

@@ -12,12 +12,11 @@ export const TableRow = (initialData) => {
         { className: `table-row` },
         div(
           {
-            className: `table-row__content`,
-            onclick: () => console.log("div onClick: " + (data)),
+            className: `table-row__content`
           },
           button(
-            { onclick: e => console.log(e, data) },
-            `click me`,
+            { onclick: e => store.selectItemById(data.id) },
+            `render again`,
           ),
           p(data.name),
         ),
