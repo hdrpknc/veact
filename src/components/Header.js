@@ -1,6 +1,6 @@
-import { header } from '../veact.js';
-import { h1 } from '../veact.js';
-import { a } from'../veact.js';
+import { header } from '../libs/veact.js';
+import { h1 } from '../libs/veact.js';
+import { a } from '../libs/veact.js';
 
 export const Header = props => (
     header({ className: "header" },
