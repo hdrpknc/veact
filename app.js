@@ -1,6 +1,6 @@
-import div from './veact';
-const Header = require("./components/Header");
-const Table = require("./components/Table");
+import div from './veact.js';
+// const Header = require("./components/Header");
+// const Table = require("./components/Table");
 
 const someData = {
     rows: " ",
