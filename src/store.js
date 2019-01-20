@@ -1,5 +1,5 @@
 
-export const selectItemById = function(id) {
+export function selectItemById (id) {
     this.updateItem(id, { selected: true });
   
     if (this.selectedItem) {
@@ -9,7 +9,7 @@ export const selectItemById = function(id) {
     this.selectedItem = this.getItemById(id);
   };
 
-export const updateItem = function(id, data, triggerListener = true) {
+export function updateItem (id, data, triggerListener = true) {
     const item = this.getItemById(id);
   
     Object.assign(item, data); // gasp, mutability
@@ -21,17 +21,18 @@ export const updateItem = function(id, data, triggerListener = true) {
     if (triggerListener) this.triggerListener(id);
   };
 
-export const listen = function(id ,callback){
-  data.push({id : id, callback : callback});
+export function listen (id ,callback){
+  this.data.push({id : id, callback : callback});
 };
 
-const data = [];
+export const data = [];
 
-this.getItemById = function(id){
-  return data[0];
+export function getItemById (id){
+  return this.data[0];
 };
 
-this.triggerListener = function(id){
-  data[0].callback(id, {name : "drei", id: "3"});
+export function triggerListener (id){
+  this.data[0].callback(this.getItemById(id));
 };
  
+export const selectedItem = {};
