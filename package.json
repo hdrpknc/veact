@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/hdrpknc/veact/issues"
   },
-  "homepage": "https://github.com/hdrpknc/veact#readme"
+  "homepage": "https://github.com/hdrpknc/veact#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
